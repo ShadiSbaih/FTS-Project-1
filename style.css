@@ -14,3 +14,136 @@ ul {
   border-radius: 1.5em;
   font-family: var(--mainFont);
 }
+
+
+/* end header & footer
+
+/* start hero section */
+
+#hero-section {
+  display: flex;
+  flex-direction: column;
+}
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.625em;
+  padding-block: 2em;
+}
+#heroTitle {
+  font-size: 2em;
+}
+#heroPar {
+  color: var(--textColor);
+}
+/* hero section grid */
+
+/* Mobile phones: 320px–440px */
+@media only screen and (min-width: 20em) and (max-width: 27.5em) {
+  #hero-bento-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "GD GD "
+      "UIUX Apps"
+      "ILL ILL"
+      "Photo Photo"
+      "MG MG";
+    gap: 0.625em;
+  }
+  #hero-bento-grid > img {
+    border-radius: 1.375em;
+    margin: auto;
+    display: block;
+  }
+
+  #GD {
+    grid-area: GD;
+  }
+  #UIUX {
+    grid-area: UIUX;
+  }
+  #Apps {
+    grid-area: Apps;
+  }
+  #ILL {
+    grid-area: ILL;
+  }
+  #Photo {
+    grid-area: Photo;
+  }
+  #MG {
+    grid-area: MG;
+  }
+}
+
+/* Small tablets: 441px–767pxm,iPads: 768px–834px */
+@media only screen and (min-width: 27.5625em) and (max-width: 52.125em) {
+  #hero-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "GD GD UIUX Apps "
+      "GD GD ILL ILL "
+      "Photo Photo MG MG ";
+    gap: 0.625em;
+    margin: 0 auto;
+  }
+  #GD {
+    grid-area: GD;
+  }
+  #UIUX {
+    grid-area: UIUX;
+  }
+  #Apps {
+    grid-area: Apps;
+  }
+  #ILL {
+    grid-area: ILL;
+  }
+  #Photo {
+    grid-area: Photo;
+  }
+  #MG {
+    grid-area: MG;
+  }
+}
+
+/* Desktop & large screens: 835px+ */
+@media only screen and (min-width: 52.1875em) {
+  #hero-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "GD GD UIUX Apps Photo Photo "
+      "GD GD ILL ILL  MG MG";
+    gap: 0.625em;
+    margin: 0 auto;
+  }
+  #GD {
+    grid-area: GD;
+  }
+  #UIUX {
+    grid-area: UIUX;
+  }
+  #Apps {
+    grid-area: Apps;
+  }
+  #ILL {
+    grid-area: ILL;
+  }
+  #Photo {
+    grid-area: Photo;
+  }
+  #MG {
+    grid-area: MG;
+  }
+}
+
+/* end hero section */
